@@ -102,6 +102,7 @@ main {
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
   position: absolute;
+  width: max-content;
   left: 50%;
   transform: translateX(-50%);
   color: #444;
@@ -168,4 +169,77 @@ main {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .name {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    height: 80%;
+    width: 97%;
+    overflow: visible;
+  }
+
+  .player {
+    padding: 1rem;
+  }
+
+  .btn--new {
+    width: 200px;
+  }
+
+  .dice {
+    top: 32%;
+    height: 8rem;
+  }
+}
+
+/* portrait || */
+@media screen and (max-width: 1000px) and (orientation: portrait) {
+  main {
+    height: 80%;
+  }
+
+  .btn--new {
+    top: -10%;
+  }
+
+  .btn--roll {
+    top: 53%;
+  }
+  .btn--hold {
+    top: 65%;
+  }
+}
+
+/* landscape == */
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+  main {
+    height: 95%;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .btn--new {
+    top: 12%;
+  }
+
+  .btn--roll {
+    top: 60%;
+  }
+  .btn--hold {
+    top: 77%;
+  }
 }
